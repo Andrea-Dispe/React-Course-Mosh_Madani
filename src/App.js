@@ -1,11 +1,22 @@
-import Counter from './components/counter'
-
-import logo from './logo.svg';
-import './App.css';
+import Counters from './components/Counter'
+import RenderingStyles from "./components/RenderingStyles";
+import RenderingLists from "./components/RenderingLists";
+import ConditionalRendering from "./components/ConditionalRendering";
+import HandlingEvents from "./components/HandlingEvents";
+import UpdateState from "./components/UpdateState";
+import "./App.css";
 
 function App() {
   return (
-    <Counter></Counter>
+    <>
+      {/* <Counter></Counter> */}
+      <Counters />
+      <RenderingStyles />
+      <RenderingLists />
+      <ConditionalRendering />
+      <HandlingEvents />
+      <UpdateState />
+    </>
   );
 }
 
