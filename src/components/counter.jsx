@@ -26,6 +26,7 @@ green20 = {
         {/* render styles dinamycally */}
         <span style={this.state.value > 0 ? this.green20 : this.red25}>Render styles dinamically</span>
         <button>click me</button>
+        <button className="btn btn-danger btn-sm m-2">Delete</button>
       </>
     );
   }
