@@ -2,7 +2,8 @@ import React, { Component } from "react";
 
 class Counter extends Component {
   state = {
-    count: 5,
+
+    value: this.props.value,
   };
   styles = {
     color: 'orange',
@@ -27,14 +28,16 @@ class Counter extends Component {
   render() {
     return (
       <>
-        <span>This State Count {this.state.count}</span>
+        <span>This State value {this.state.value}</span>
         <span style={this.styles}>Obj reference Stylying</span>
         {/* render inline style */}
         <span style={{color: 'blue', fontSize: '19px', textDecoration: 'underline'}}>Inline Stylying</span>
-        {/* render styles dinamycally 1*/}
-        <span style={this.state.count > 0 ? this.green20 : this.red25git}>Render styles dinamically</span>
         {/* render the style by appending classes dynamically */}
         <span className={this.getBadgeClasses()}>This is dynamically rendered by appending bootstrap classes according to what the count is</span>
+        {/* render styles dinamycally */}
+        <span style={this.state.value > 0 ? this.green20 : this.red25}>Render styles dinamically</span>
+        <button>click me</button>
+        <button className="btn btn-danger btn-sm m-2">Delete</button>
       </>
     );
   }
