@@ -1,10 +1,7 @@
 import React, { Component } from "react";
 
 class Counter extends Component {
-  state = {
-    value: this.props.counter.value,
-    id: this.props.counter.id
-  };
+
   styles = {
     color: 'orange',
     fontSize: '22px'
