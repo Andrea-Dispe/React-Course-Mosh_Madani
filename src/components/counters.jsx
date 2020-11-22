@@ -12,13 +12,17 @@ class Counters extends Component {
    }
 
    handleDelete = (id) => {
-     this.setState(this.state.counters.filter(counter => counter.id !== id))
+     console.log('id is ', id)
+     console.log('the state is ', this.state)
+     const counters =  this.state.counters.filter(counter => counter.id !== id)
+     // in the setState remeber to pass the new array inside an object
+     this.setState({counters})
    }
 
   render() {
     return (
       <>
-        {this.state.counters.map(counter => <Counter value={counter.value} key={counter.id} onDelete={this.handleDelete }/>)}
+        {this.state.counters.map(counter => <div key={counter.id} style={{borderBottom: '3px solid black' }}><Counter counter={counter} onDelete={this.handleDelete}/></div>)}
       </>
     );
   }
