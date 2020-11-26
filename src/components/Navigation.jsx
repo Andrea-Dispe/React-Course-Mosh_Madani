@@ -1,6 +1,6 @@
 import React from "react";
 
-const NavBar = (props) => {
+const NavBar = ({counters}) => {
   return (
     <>
       <nav className="navbar navbar-light bg-light">
@@ -8,7 +8,7 @@ const NavBar = (props) => {
           Navbar
           <div>
             <p className="badge badge-pill badge-secondary">
-              There are {props.counters.length} Counters
+              There are {counters.length} Counters
             </p>
           </div>
         </a>

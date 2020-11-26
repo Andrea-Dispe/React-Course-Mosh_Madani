@@ -6,6 +6,8 @@ import RenderingLists from "./components/RenderingLists";
 import ConditionalRendering from "./components/ConditionalRendering";
 import HandlingEvents from "./components/HandlingEvents";
 import UpdateState from "./components/UpdateState";
+import MountingPhase from "./components/MountingPhase";
+
 import "./App.css";
 
 
@@ -40,8 +42,8 @@ handleIncrement = (counter) => {
   counters[counterIndex] = {...counter};
   counters[counterIndex].value++;
   this.setState({ counters })
-
 };
+
   render() {
     return (
       <>
@@ -53,6 +55,7 @@ handleIncrement = (counter) => {
           <ConditionalRendering />
           <HandlingEvents />
           <UpdateState />
+          <MountingPhase />
         </main>
       </>
     );
