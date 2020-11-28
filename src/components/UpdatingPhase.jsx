@@ -14,6 +14,7 @@ componentDidUpdate(prevProps, prevState) {
   }
 }
 
+// componentWillUnmount is called just before a component is deleted/unmounted
 componentWillUnmount() {
   console.log(`Unmounting box number #${this.props.box.id}`)
 }
